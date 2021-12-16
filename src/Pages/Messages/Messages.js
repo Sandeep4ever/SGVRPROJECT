@@ -38,23 +38,40 @@ const PeoplesDiv=styled.div`
 height: 58px;
 display: flex;
 align-items:center;
-/* justify-content:space-between; */
-border:1px solid red;
+background: #BF9D2C5E 0% 0% no-repeat padding-box;
+border-radius: 8px;
+padding-left: 5px;
+padding-right: 5px;
+margin-top:15px;
 
 `
 const Imagediv=styled.div`
 img{
     width: 42px;
-height: 42px;  
+    height: 42px;  
     border-radius:50%;
 }
 `
 const ContentDiv=styled.div`
-
+padding-left:10px;
+h6{
+    font: normal normal 500 16px/19px Rubik;
+    color: #2C2C2C;
+}
+p{
+    font: normal normal normal 12px/14px Rubik;
+color: #3F546D;
+}
 `
 
 const DateDiv=styled.div`
-
+font: normal normal normal 12px/14px Rubik;
+color: #2C2C2C;
+padding-left:8px;
+margin-top:-20px;
+p{
+   
+}
 `
 const ChatBoxContainer=styled.div`
 width: 100%;
@@ -85,11 +102,11 @@ const Messages = () => {
                          <img src={img.people}/>
                      </Imagediv>
                      <ContentDiv>
-                         <h6>Sandeep</h6>
-                         <p>Hii How are you </p>
+                         <h6>Saumya</h6>
+                         <p>Lorem Ipsum is simply dummy </p>
                      </ContentDiv>
                      <DateDiv>
-                         Today
+                         <p>Today</p>
                      </DateDiv>
                  </PeoplesDiv>
 
@@ -98,6 +115,7 @@ const Messages = () => {
           <ChatBoxContainer>
               <Header>
                   <p>Sandeep</p>
+                  
               </Header>
 
           </ChatBoxContainer>
