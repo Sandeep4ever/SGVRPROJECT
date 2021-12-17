@@ -221,12 +221,57 @@ const CardlistState =(props)=>{
           },
         ])
 
+        const [messagesData] =useState([
+          {
+              id:0,
+              name:"Saumya",
+              content:"Lorem Ipsum is simply dummy",
+             date:"Today",     
+             image:`${images.people}`,      
+          },
+          {
+            id:1,
+            name:"Saumya",
+            content:"Lorem Ipsum is simply dummy",
+           date:"Today",     
+           image:`${images.people}`,
+          },
+          {
+            id:2,
+            name:"Saumya",
+              content:"Lorem Ipsum is simply dummy",
+             date:"Today",     
+             image:`${images.people}`,
+          },
+          {
+            id:3,
+            name:"Saumya",
+            content:"Lorem Ipsum is simply dummy",
+           date:"Today",     
+           image:`${images.people}`,
+          },
+          {
+            id:4,
+            name:"Saumya",
+              content:"Lorem Ipsum is simply dummy",
+             date:"Today",     
+             image:`${images.people}`,
+          },
+          {
+            id:5,
+            name:"Saumya",
+              content:"Lorem Ipsum is simply dummy",
+             date:"Today",     
+             image:`${images.people}`,
+          },
+        ])
+
 const[cardlistClose,setCardlistClose]= useState(true);
 const[uploadFile,setUploadFile]= useState(true);
 
 return(
     <Cardlistcontext.Provider value={{cardlistClose, setCardlistClose,OnbordingData,PostData,lastnameData,setlastnameData,
-      uploadFile,setUploadFile, paymentlistData,
+      uploadFile,setUploadFile, paymentlistData,messagesData
     }}>
        {props.children}
     </Cardlistcontext.Provider>

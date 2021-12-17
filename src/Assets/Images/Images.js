@@ -28,6 +28,8 @@ import downloadImg2 from '../Images/downloadImg2.svg';
 import view2 from '../Images/view.svg';
 import backicon from '../Images/backicon.svg';
 import people from '../Images/people.png';
+import sendmessage from '../Images/sendmessage.png';
+
 
 
 
@@ -63,5 +65,6 @@ const images ={
     view2,
     backicon,
     people,
+    sendmessage,
 }
 export default images;
