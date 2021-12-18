@@ -88,7 +88,7 @@ height: 70px;
 background: #FFFFFF 0% 0% no-repeat padding-box;
 box-shadow: 0px 2px 6px #0000000D;
 p{
-    font: normal normal 600 24px/30px Gibson;
+    font: normal normal 600 24px/30px Rubik;
     color: #000000;
 }
 
@@ -105,7 +105,7 @@ align-items:center;
 justify-content:center;
 
 p{
-    font: normal normal 600 12px/14px Gibson;
+    font: normal normal 600 12px/14px Rubik ;
 color: #78849E;
 opacity: 0.56;
 }
@@ -134,7 +134,7 @@ padding:16px;
 margin-left:6px;
 
 p{
-    font: normal normal normal 14px/20px Gibson;
+    font: normal normal normal 14px/20px Rubik ;
     color: #242424;
 }
 
@@ -152,13 +152,13 @@ border-radius: 12px;
 padding:16px;
 
 p{
-    font: normal normal normal 14px/20px Gibson;
+    font: normal normal normal 14px/20px Rubik ;
     color: #FFFFFF;
 }
 `
 const InputSection =styled.div`
 display: flex;
-position:absolute;
+position:fixed;
 bottom:0px;
 /* left:0 */
 padding:8px 37px 0px 8px;
@@ -178,6 +178,7 @@ input{
 `
 const SendMessagediv =styled.div`
 margin-left:9px;
+margin-bottom:5px;
 img{
     width: 54px;
     height: 54px;
@@ -262,12 +263,33 @@ const Messages = () => {
                          </YourText>
                        </ForYouDiv>
                    </ChatMessages>
+                   <ChatMessages>
+                       <ForUserDiv>
+                           <ImgDiv>
+                          <img src={img.people} alt='people'/>
+                          </ImgDiv>
+                          <UserText>
+                              <p>
+                                The person who says it cannot be done
+                                should not interrupt the person who is doing it.
+                            </p>
+                          </UserText>
+                       </ForUserDiv>
+                       <ForYouDiv>
+                         <YourText>
+                         <p>
+                            Remember that not getting what you want
+                            is sometimes a wonderful stroke of luck.
+                         </p>
+                         </YourText>
+                       </ForYouDiv>
+                   </ChatMessages>
 
                   
 
               </TextArea>
               <InputSection>
-                     <input type='text' placeholder='Search your message'/>
+                     <input type='text' placeholder='Send your message'/>
                      <SendMessagediv>
                      <img src={img.sendmessage} alt='sendmessage'/>
                      </SendMessagediv>

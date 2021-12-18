@@ -47,20 +47,21 @@ border:none;
 const AddLastNamepopup = () => {
     const state =useContext(Cardlistcontext);
       let data=[{...state.lastnameData},]
-    //   console.log(data)
 
     const closePopup=()=>{
      state.setCardlistClose(!state.cardlistClose)
     }
 
     const handleData=(e)=>{
-        data={[e.target.name]:e.target.value}
+        data={[e.target.name]:e.target.value,id:state.lastnameData.at(-1).id+1}
     }
+
 
     const AddData=()=>{
         state.lastnameData.push(data)
         state.setCardlistClose(!state.cardlistClose)
     }
+
     return (
         <PopupContainer>
             <ContextContainer>

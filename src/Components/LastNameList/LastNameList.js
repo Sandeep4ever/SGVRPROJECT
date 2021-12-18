@@ -118,14 +118,14 @@ const LastNameList = () => {
  const showUploadFile=()=>{
   uploadfile.setUploadFile(!uploadfile.uploadFile)
  }
- console.log(state.lastnameData)
+//  console.log(state.lastnameData)
 
  const deleteData =(id)=>{
-   console.log("index kiska", id);
+  //  console.log("index kiska", id);
 
    state.setlastnameData(state.lastnameData.filter((items) => items.id !== id))
   
-  console.log(state.lastnameData)
+  // console.log(state.lastnameData)
   //  if(renderData.id !== index){
       
    }

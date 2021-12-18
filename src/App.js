@@ -31,7 +31,7 @@ const App = () => {
      <Route path='/' element={<SideNav/>}/>
 </Routes>
             {/* <CardList/> */}
-    {/* <Login/> */}
+    <Login/>
      {/* <AddLastNamepopup/> */}
    {/* <Upload/> */}
      {/* <OnlySearchbar/> */}
