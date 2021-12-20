@@ -284,9 +284,6 @@ const Messages = () => {
                          </YourText>
                        </ForYouDiv>
                    </ChatMessages>
-
-                  
-
               </TextArea>
               <InputSection>
                      <input type='text' placeholder='Send your message'/>

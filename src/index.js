@@ -6,16 +6,4 @@ import App from './App';
 import Onbordinglist from './Components/Jewellery/Onbordinglist/Onbordinglist';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-ReactDOM.render(
-  <>
-   {/* <BrowserRouter>  */}
-    {/* <App /> */}
-    {/* <Routes> */}
- {/* <Route path='/' element={ }/> */}
-
-    {/* </Routes> */}
-    {/* </BrowserRouter> */}
-    <App/>
-    </>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App/>, document.getElementById('root'));

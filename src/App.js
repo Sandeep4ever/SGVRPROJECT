@@ -18,25 +18,26 @@ import Upload from './Components/LastNameList/upload';
 import OnlySearchbar from './Utils/OnlySearchbar';
 import PaymentStatus from './Components/Payment/PaymentStatus';
 import Messages from './Pages/Messages/Messages';
-
+import ForgetPassword from './Pages/LoginPage/ForgetPassword';
 
 const App = () => {
-    return (
+ 
+    return(
         <BrowserRouter> 
 <CardlistState>
         <GlobalStyle/>
         <Navbar/>
-        <ForCombine>
+     =
 <Routes>
-     <Route path='/' element={<SideNav/>}/>
+     <Route path='/' element={<Login/>}/>
 </Routes>
             {/* <CardList/> */}
-    <Login/>
+    {/* <Login/> */}
      {/* <AddLastNamepopup/> */}
    {/* <Upload/> */}
      {/* <OnlySearchbar/> */}
      {/* <PaymentStatus/> */}
-        </ForCombine>
+      
         <Routes>
  <Route path='/matrimonylist' element={ <CardList/>}/>
  </Routes>
@@ -55,14 +56,13 @@ const App = () => {
  <Routes>
    <Route path='/messages' element={ <Messages/>}/>
  </Routes>
+ <Routes>
+   <Route path='/forgetpassword' element={ <ForgetPassword/>}/>
+ </Routes>
  </CardlistState>
   
+  
   </BrowserRouter> 
-    )
+    );
 }
-
 export default App;
-
-const ForCombine=styled.div`
-display: flex;
-`

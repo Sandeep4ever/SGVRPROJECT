@@ -2,6 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import img from '../Assets/Images/Images';
 import { NavLink } from 'react-router-dom';
+import Icon from '@material-ui/core/Icon';
+import { makeStyles } from '@material-ui/styles';
+import SvgIcon from "@material-ui/core/SvgIcon";
+import Helo from '../Assets/Images/dasda.svg';
+
+
 
 
 const MainNavContainer=styled.div`
@@ -49,6 +55,7 @@ const SecondContainer=styled.div`
 
 `
 
+ 
 const Navbar = () => {
     return (
         <MainNavContainer>
@@ -57,14 +64,17 @@ const Navbar = () => {
                  <img src={img.logo} alt='image'/>
               </Logo>
               <Text>
-              <NavLink   to="/about"> Shop</NavLink>
+              {/* <NavLink   to="/about"> Shop</NavLink>
               <NavLink   to="/about"> Vendor</NavLink>
-              <NavLink   to="/about"> Worker</NavLink>
+              <NavLink   to="/about"> Worker</NavLink> */}
               </Text>
            </FirstContainer>
 
            <SecondContainer>
-           <NavLink   to="/messages"><img src={img.chat} alt='chat'/></NavLink>
+           <NavLink to="/messages"><div style={{display:'inline-block',height:"20px",width:'24px'}}><SvgIcon component="object">
+           <embed type="image/svg+xml" src={Helo} />
+       </SvgIcon></div></NavLink>
+          
            <NavLink   to="/notification"><img src={img.Notifi} alt='image'/></NavLink>
            </SecondContainer>
         </MainNavContainer>

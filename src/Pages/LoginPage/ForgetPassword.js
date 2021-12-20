@@ -11,7 +11,6 @@ background-Image:url(${img.backgroundImg});
 background-size:cover;
 background-position:center;
 background-repeat: no-repeat;
-
 `
 const Logo=styled.div`
 
@@ -60,14 +59,14 @@ padding: 14px 9px;
     outline:none;
 }
 }
-div{
+/* div{
     margin-top:14px;
     float: right;
     a{
         font: normal normal normal 14px/19px pt Sans;
       color: #B98C13;
     }
-}
+} */
 button{
     width: 339px;
 height: 54px;
@@ -79,29 +78,29 @@ font: normal normal 600 16px/30px Poppins;
 color: #FFFFFF;
 }
 `
-const Login = () => {
+const ForgetPassword = () => {
     return (
         <MainLoginContainer>
             <Logo>
-                <img src={img.logo}/>
+                {/* <img src={img.logo}/> */}
             </Logo>
             <LoginContainer>
                 <Adjust>
                <Header>
-                  <h4> Login</h4>
+                  <h4> Reset Password</h4>
                   <p>Please sign in to continue</p>
                </Header>
                  <InputField>
-                  <input type='text' placeholder='Email/Phone No.'/><br/>
-                  <input type='text' placeholder='Password'/>
-                  <div>
-                  <NavLink to="/forgetpassword">Forget Password</NavLink>
-                  </div>
-                 <button>Login</button>
+                  <input type='text' placeholder='Email Id'/><br/>
+                  {/* <input type='text' placeholder='New Password'/> */}
+                  {/* <div>
+                  <NavLink to="/about">Forget Password</NavLink>
+                  </div> */}
+                 <button>Resend your Password</button>
                  </InputField>
                </Adjust>
             </LoginContainer>
         </MainLoginContainer>
     )
 }
-export default Login
+export default ForgetPassword;
