@@ -19,6 +19,7 @@ import OnlySearchbar from './Utils/OnlySearchbar';
 import PaymentStatus from './Components/Payment/PaymentStatus';
 import Messages from './Pages/Messages/Messages';
 import ForgetPassword from './Pages/LoginPage/ForgetPassword';
+import Matrimony from './Components/Matrimony/Matrimony';
 
 const App = () => {
  
@@ -27,9 +28,8 @@ const App = () => {
 <CardlistState>
         <GlobalStyle/>
         <Navbar/>
-     =
 <Routes>
-     <Route path='/' element={<Login/>}/>
+     <Route path='/' element={<SideNav/>}/>
 </Routes>
             {/* <CardList/> */}
     {/* <Login/> */}
@@ -39,7 +39,7 @@ const App = () => {
      {/* <PaymentStatus/> */}
       
         <Routes>
- <Route path='/matrimonylist' element={ <CardList/>}/>
+ <Route path='/matrimonylist' element={ <Matrimony/>}/>
  </Routes>
    <Routes>
  <Route path='/onbordinglist' element={ <Onbordinglist/>}/>
@@ -60,8 +60,6 @@ const App = () => {
    <Route path='/forgetpassword' element={ <ForgetPassword/>}/>
  </Routes>
  </CardlistState>
-  
-  
   </BrowserRouter> 
     );
 }

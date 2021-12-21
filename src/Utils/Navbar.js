@@ -6,8 +6,7 @@ import Icon from '@material-ui/core/Icon';
 import { makeStyles } from '@material-ui/styles';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Helo from '../Assets/Images/dasda.svg';
-
-
+import notifi from '../Assets/Images/notifi.svg';
 
 
 const MainNavContainer=styled.div`
@@ -25,37 +24,26 @@ display: flex;
 const Logo=styled.div`
 img{
    width: 210px;
+   height: 44px;
 }
 `
-const Text=styled.div`
-display: flex;
-align-items: center;
+const SecondContainer=styled.div`
 a{
-   margin-left: 83px;
+   margin-left: 42px;
    font: normal normal 500 16px/25px Poppins;
-   /* font-family: 'Poppins', sans-serif; */
-   /* font-size: 16px; */
    text-decoration: none;
    color: #000000;
-   padding: 20px 0px;
+  
    border-bottom: 3px solid transparent;
-   &:hover{
+   /* &:hover{
 
       border-bottom: 4px solid #D4AF37;
    }
    &:active{
       border-bottom: 4px solid #D4AF37;
-   }
+   } */
 }
 `
-const SecondContainer=styled.div`
- img{
-   margin-right: 31px;
-}
-
-`
-
- 
 const Navbar = () => {
     return (
         <MainNavContainer>
@@ -63,22 +51,20 @@ const Navbar = () => {
               <Logo>
                  <img src={img.logo} alt='image'/>
               </Logo>
-              <Text>
-              {/* <NavLink   to="/about"> Shop</NavLink>
-              <NavLink   to="/about"> Vendor</NavLink>
-              <NavLink   to="/about"> Worker</NavLink> */}
-              </Text>
            </FirstContainer>
-
            <SecondContainer>
            <NavLink to="/messages"><div style={{display:'inline-block',height:"20px",width:'24px'}}><SvgIcon component="object">
            <embed type="image/svg+xml" src={Helo} />
        </SvgIcon></div></NavLink>
           
-           <NavLink   to="/notification"><img src={img.Notifi} alt='image'/></NavLink>
+           <NavLink   to="/notification">
+              {/* <img src={notifi} alt='image'/> */}
+              <SvgIcon component="object">
+           <embed type="image/svg+xml" src={notifi} />
+       </SvgIcon>
+           </NavLink>
            </SecondContainer>
         </MainNavContainer>
     )
 }
-
 export default Navbar

@@ -7,8 +7,8 @@ const data =
   "address":"HSR Layout sector 7",
    "phone":91+ 9847656588,
   "email":"Sidharthpatel@gmail.com",
- "Jevellery":"Jevellery",
- "Restaurants":"Restaurants",
+ "Jevellery":"Function Hall",
+
 },
 {
   "name":"Amogh",
@@ -16,8 +16,7 @@ const data =
   "address":"HSR Layout sector 7",
    "phone":91+ 9847656588,
   "email":"Sidharthpatel@gmail.com",
- "Jevellery":"Jevellery",
- "Restaurants":"Restaurants",
+ "Jevellery":"Function Hall",
  
 },
 {
@@ -26,8 +25,7 @@ const data =
   "address":"HSR Layout sector 7",
    "phone":91+ 9847656588,
   "email":"Sidharthpatel@gmail.com",
- "Jevellery":"Jevellery",
- "Restaurants":"Restaurants",
+ "Jevellery":"Function Hall",
   
 },
 {
@@ -36,8 +34,7 @@ const data =
   "address":"HSR Layout sector 7",
    "phone":91+ 9847656588,
   "email":"Sidharthpatel@gmail.com",
- "Jevellery":"Jevellery",
- "Restaurants":"Restaurants",
+ "Jevellery":"Function Hall",
  
 },
 {
@@ -46,8 +43,7 @@ const data =
   "address":"HSR Layout sector 7",
    "phone":91+ 9847656588,
   "email":"Sidharthpatel@gmail.com",
- "Jevellery":"Jevellery",
- "Restaurants":"Restaurants",
+ "Jevellery":"Function Hall",
  
 },
 {
@@ -56,8 +52,7 @@ const data =
   "address":"HSR Layout sector 7",
    "phone":91+ 9847656588,
   "email":"Sidharthpatel@gmail.com",
- "Jevellery":"Jevellery",
- "Restaurants":"Restaurants",
+ "Jevellery":"Function Hall",
  
 }
 

@@ -34,7 +34,7 @@ const OnlySearchbar = () => {
     return (
         <MainContainer>
             <Inputdiv>
-            <input type='text' placeholder='Search' />
+            <input type='text' placeholder='Search'/>
             </Inputdiv>
         <Imgdiv>
         <img src={img.search} alt='search'/>

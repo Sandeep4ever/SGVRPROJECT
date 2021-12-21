@@ -16,8 +16,8 @@ background-repeat: no-repeat;
 const Logo=styled.div`
 
 img{
-    width: 282px;
-height:78px;
+    /* width: 282px;
+height:78px; */
 }
 `
 const LoginContainer=styled.div`
