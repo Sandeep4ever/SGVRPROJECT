@@ -5,13 +5,16 @@ import data from './Data';
 import Cardlistcontext from '../../ContextApi/Cardlistcontext';
 import SideNav from '../../Utils/SideNav';
 import OnlySearchbar from '../../Utils/OnlySearchbar';
-import viewpic from '../../Assets/Images/viewpic.svg';
+// import viewpic from '../../Assets/Images/viewpic.svg';
 import SvgIcon from "@material-ui/core/SvgIcon";
+import Pagination from '../../Utils/Pagination';
+import Dropdown from './Dropdown';
 
 const Matrimony = () => {
     return (
         <WrapContainer>
                 <SideNav/>
+                <WrapPaginationandMainList>
         <MainListContainer>
             <Header>
                 Onboarding list
@@ -23,24 +26,33 @@ const Matrimony = () => {
             </Section>
            <SearchContainer>
               <OnlySearchbar/>
-              <select>
-                <option>Function Hall</option>
-                <option>Men Salon</option>
-                <option>Women Salon</option>
-                <option>Select Category</option>
-              </select>
+              {/* <select>
+                <option> 
+                   Function Hall
+                    </option>
+                <option>
+                  Function Hall
+                    </option>
+                <option>
+                  Function Hall
+                    </option>
+                <option>
+                    Select Category
+                    </option>
+              </select> */}
+              <Dropdown/>
            </SearchContainer>
-           <ForRow>
+           <WrapCardConta>
            {data.map((items,index)=>{
                return(
                 <CardContainer key={index}>
                 <ViewIconDiv>
                     {/* <img src={viewpic} alt='delete'/> */}
-
                     <SvgIcon>
-    <path id="Path_8127" data-name="Path 8127" d="M7.366,4C2.491,4-.012,8.915-.012,8.915A8.076,8.076,0,0,0,7.366,13.83c4.971,0,7.377-4.9,7.377-4.9S12.317,4,7.366,4Zm.011,7.987A3,3,0,0,1,4.306,8.915,3,3,0,0,1,7.377,5.843a3,3,0,0,1,3.071,3.072A3,3,0,0,1,7.377,11.987Zm0-4.915A1.843,1.843,0,1,0,9.219,8.915,1.864,1.864,0,0,0,7.377,7.072Z" transform="translate(0.012 -4)"/>
+         <path id="Path_8127" data-name="Path 8127"
+          d="M7.366,4C2.491,4-.012,8.915-.012,8.915A8.076,8.076,0,0,0,7.366,13.83c4.971,0,7.377-4.9,7.377-4.9S12.317,4,7.366,4Zm.011,7.987A3,3,0,0,1,4.306,8.915,3,3,0,0,1,7.377,5.843a3,3,0,0,1,3.071,3.072A3,3,0,0,1,7.377,11.987Zm0-4.915A1.843,1.843,0,1,0,9.219,8.915,1.864,1.864,0,0,0,7.377,7.072Z" 
+          transform="translate(0.012 -4)" />
                     </SvgIcon>
-
                 </ViewIconDiv>
               <Head>
                  {items.name}
@@ -72,22 +84,28 @@ const Matrimony = () => {
                  <Reject>
                  Reject
                  </Reject>
-
               </ButtonDiv>
-
             </CardContainer>
                )
            })
            }
-</ForRow>      
+</WrapCardConta>     
+
         </MainListContainer>
-        </WrapContainer>
+            <PaginationDiv>
+                <Pagination styled={{paddingRight:"42px"}}/>
+            </PaginationDiv>
+       </WrapPaginationandMainList>
+     </WrapContainer>
     )
 }
 export default Matrimony;
 
 const WrapContainer=styled.div`
 display: flex;
+`
+const WrapPaginationandMainList =styled.div`
+
 `
 const MainListContainer=styled.div`
 width: 100%;
@@ -130,6 +148,7 @@ const BrideDiv =styled(VendorsDiv)`
 const SearchContainer=styled.div`
    display:flex;
    margin-top:31px;
+   border:1px solid red;
    select{
     width: 145px;
     height: 38px; 
@@ -149,7 +168,6 @@ const SearchContainer=styled.div`
    }
 `
 const CardContainer=styled.div`
-
 width: 350px;
 height: 197px;
 margin-top: 21px;
@@ -168,8 +186,10 @@ const ViewIconDiv =styled.div`
 display: flex;
 justify-content: flex-end;
     .MuiSvgIcon-root{
+        color:#C5C5C5;
+        transition:0.2s ease-in;
         &:hover{
-            color:red;
+            color: #D8AE25 ;
         }
 
     }
@@ -271,13 +291,21 @@ padding:9px 60px;
 margin-left:6px;
 font: normal normal medium 14px/21px Poppins;
 color: #C5C5C5;
+transition:0.3s ease-in ;
 &:hover{
     background: #D8AE25 0% 0% no-repeat padding-box;
     color: #FFFFFF;
 }
 `
-const ForRow =styled.div`
+const WrapCardConta =styled.div`
 display: flex;
 justify-content: space-between;
 flex-wrap: wrap;
 `
+const PaginationDiv =styled.div`
+margin-top:12px;
+// padding-left:42px;
+// padding-right:42px;
+`
+
+
