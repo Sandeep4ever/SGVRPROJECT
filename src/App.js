@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 import Navbar from './Utils/Navbar';
 import SideNav from './Utils/SideNav';
 import CardList from './Components/Jewellery/CardList';

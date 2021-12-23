@@ -264,7 +264,21 @@ const CardlistState =(props)=>{
              date:"Today",     
              image:`${images.people}`,
           },
-        ])
+        ]);
+
+        // const[vendorDetails] =useState([
+        //   {
+        //     businessname ="Asha Function Hall",
+        //     ownername ="Owner Name",
+        //     email="Asha.Sing1@gmail.com",
+        //     phone="+91 8451686256",
+        //     servicprovides="Function Hall",
+        //     state='Karnataka',
+        //     city="Bangalore",
+        //     address1='Lorem Ipsum is simply dummy text of the printing and',
+        //     address2=""
+        //   }
+        // ])
 
 const[cardlistClose,setCardlistClose]= useState(true);
 const[uploadFile,setUploadFile]= useState(true);

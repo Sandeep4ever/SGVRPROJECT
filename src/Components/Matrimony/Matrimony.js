@@ -26,20 +26,6 @@ const Matrimony = () => {
             </Section>
            <SearchContainer>
               <OnlySearchbar/>
-              {/* <select>
-                <option> 
-                   Function Hall
-                    </option>
-                <option>
-                  Function Hall
-                    </option>
-                <option>
-                  Function Hall
-                    </option>
-                <option>
-                    Select Category
-                    </option>
-              </select> */}
               <Dropdown/>
            </SearchContainer>
            <WrapCardConta>
@@ -148,7 +134,6 @@ const BrideDiv =styled(VendorsDiv)`
 const SearchContainer=styled.div`
    display:flex;
    margin-top:31px;
-   border:1px solid red;
    select{
     width: 145px;
     height: 38px; 
