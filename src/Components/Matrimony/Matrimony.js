@@ -1,4 +1,4 @@
-import React,{useState,useContext} from 'react';
+import React,{useContext} from 'react';
 import styled from 'styled-components';
 import img from '../../Assets/Images/Images';
 import data from './Data';
@@ -9,9 +9,28 @@ import OnlySearchbar from '../../Utils/OnlySearchbar';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Pagination from '../../Utils/Pagination';
 import Dropdown from './Dropdown';
+import VendorDetails from './VendorDetails';
+
+const WrapVendorDetails =styled.div`
+position:absolute;
+top:0;
+right :0;
+
+`
 
 const Matrimony = () => {
+    const state =useContext(Cardlistcontext); 
+
+
+    const viewVendorDetails=()=>{
+        state.setWid("349px")
+    }
     return (
+        <>
+       
+        <WrapVendorDetails >
+          <VendorDetails />
+        </WrapVendorDetails>
         <WrapContainer>
                 <SideNav/>
                 <WrapPaginationandMainList>
@@ -32,7 +51,7 @@ const Matrimony = () => {
            {data.map((items,index)=>{
                return(
                 <CardContainer key={index}>
-                <ViewIconDiv>
+                <ViewIconDiv onClick={viewVendorDetails}>
                     {/* <img src={viewpic} alt='delete'/> */}
                     <SvgIcon>
          <path id="Path_8127" data-name="Path 8127"
@@ -83,6 +102,7 @@ const Matrimony = () => {
             </PaginationDiv>
        </WrapPaginationandMainList>
      </WrapContainer>
+     </>
     )
 }
 export default Matrimony;
@@ -91,7 +111,6 @@ const WrapContainer=styled.div`
 display: flex;
 `
 const WrapPaginationandMainList =styled.div`
-
 `
 const MainListContainer=styled.div`
 width: 100%;
@@ -100,6 +119,7 @@ padding-right: 31px;
 padding-top:23px;
 `
 const Header=styled.header`
+
 font: normal normal 500 16px/25px Poppins;
 color: #000000;
 `
@@ -109,7 +129,6 @@ flex-direction:row;
 margin-top:31px;
 `
 const VendorsDiv =styled.div`
-
 width: 108px;
 height: 38px;
 display: flex;
@@ -126,10 +145,8 @@ color: #DFB93E;
 }
 `
 const GroomDiv =styled(VendorsDiv)`
-
 `
 const BrideDiv =styled(VendorsDiv)`
-
 `
 const SearchContainer=styled.div`
    display:flex;
@@ -161,29 +178,26 @@ background: #FFFFFF 0% 0% no-repeat padding-box;
 box-shadow: 0px 0px 6px #0000000F;
 `
 const Head=styled.header`
-margin-top: -12px;
+margin-top: 5px;
 font: normal normal medium 16px/21px Roboto;
 font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+font-size: 16px;
 color: #1A1616;
 `
 const ViewIconDiv =styled.div`
-display: flex;
-justify-content: flex-end;
+float:right;
+cursor:pointer;
     .MuiSvgIcon-root{
         color:#C5C5C5;
         transition:0.2s ease-in;
         &:hover{
-            color: #D8AE25 ;
+            color:#D8AE25;
         }
-
     }
 `
-
 const Location=styled.div`
 display: flex;
 padding-top: 5px;
-
 div{
     display: flex;
 
@@ -201,7 +215,6 @@ p{
     font-size: 11px;
 color: #A0A0A0;
 padding-left: 9px;
-
 }
 
 `
@@ -264,6 +277,7 @@ border-radius: 4px;
 font: normal normal medium 14px/21px Poppins;
 color: #FFFFFF;
 border:none;
+cursor:pointer;
 &:hover{
     background: #CDA830 0% 0% no-repeat padding-box;    
 }
@@ -277,6 +291,8 @@ margin-left:6px;
 font: normal normal medium 14px/21px Poppins;
 color: #C5C5C5;
 transition:0.3s ease-in ;
+cursor:pointer;
+
 &:hover{
     background: #D8AE25 0% 0% no-repeat padding-box;
     color: #FFFFFF;

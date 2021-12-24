@@ -55,7 +55,6 @@ export default function MultipleSelectCheckmarks() {
           sx={{ width: 200, height: 38, fontSize:14,border:"1px solid green",
            borderStyle:"none",
           //  boxShadow:"none,"
-          
         }}
         disableUnderline
           labelId="demo-multiple-checkbox-label"

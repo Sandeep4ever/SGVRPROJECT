@@ -15,12 +15,12 @@ const Logo = styled.header`
 display: flex;
 align-items: center;
 margin-top: 29px;
-padding-left: 36px;
+padding-left: 30px;
 img{
   border-radius: 50%;
 }
 span{
-  font: normal normal bold 18px/24px Roboto;
+  font: normal normal 500 16px/24px Roboto;
   color: #ffffff;
   padding-left: 9px;
 }
@@ -29,7 +29,6 @@ const Contant = styled.section`
   margin-top: 55px;
   display: flex;
   flex-direction: column;
-
   div {
     width: 171px;
     height: 46px;
@@ -45,7 +44,7 @@ const Contant = styled.section`
   a{
     text-decoration:none;
     color: #ffffff;
-    margin-left: 36px;
+    margin-left: 30px;
     font: normal normal normal 16px/19px Rubik;
   &:active {
     color: red;
@@ -64,9 +63,9 @@ const SideNav = () => {
                   <div >
                   <NavLink  className='navlink' to="/about" >Dashboard</NavLink>
                   </div>
-                  <div >
+                 <div>
                   <NavLink to="/matrimonylist" 
-                  style={({ isActive }) => ({
+                    style={({ isActive }) => ({
                     color: isActive ? 'red' : '#fff',
                   })}
                   >Matrimony</NavLink>

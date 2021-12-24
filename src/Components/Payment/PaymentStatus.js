@@ -268,5 +268,4 @@ const PaymentStatus = () => {
         </MainPaymentContainer>
     )
 }
-
-export default PaymentStatus
+export default PaymentStatus;

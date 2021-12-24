@@ -21,6 +21,8 @@ import PaymentStatus from './Components/Payment/PaymentStatus';
 import Messages from './Pages/Messages/Messages';
 import ForgetPassword from './Pages/LoginPage/ForgetPassword';
 import Matrimony from './Components/Matrimony/Matrimony';
+import VendorDetails from './Components/Matrimony/VendorDetails';
+import MatrimonyLink from './Utils/MatrimonyLink';
 
 const App = () => {
  
@@ -38,7 +40,8 @@ const App = () => {
    {/* <Upload/> */}
      {/* <OnlySearchbar/> */}
      {/* <PaymentStatus/> */}
-      
+      {/* <VendorDetails/> */}
+      <MatrimonyLink/>
         <Routes>
  <Route path='/matrimonylist' element={ <Matrimony/>}/>
  </Routes>

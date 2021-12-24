@@ -15,7 +15,6 @@ const CardlistState =(props)=>{
            "phone":91+ 9847656588,
           "email":"Sidharthpatel@gmail.com",
           "image":`${images.avatar}`,
-
         },
         {
           "Jevellery":"Chetmani jewellers",
@@ -25,7 +24,6 @@ const CardlistState =(props)=>{
            "phone":91+ 9847656588,
           "email":"Sidharthpatel@gmail.com",
           "image":`${images.avatar}`,
-         
         },
         {
           "Jevellery":"Chetmani jewellers",
@@ -35,7 +33,6 @@ const CardlistState =(props)=>{
           "email":"Sidharthpatel@gmail.com",
           "name":"Siddharth Patel",
           "image":`${images.avatar}`,
-          
         },
         {
           "Jevellery":"Chetmani jewellers",
@@ -266,26 +263,99 @@ const CardlistState =(props)=>{
           },
         ]);
 
-        // const[vendorDetails] =useState([
-        //   {
-        //     businessname ="Asha Function Hall",
-        //     ownername ="Owner Name",
-        //     email="Asha.Sing1@gmail.com",
-        //     phone="+91 8451686256",
-        //     servicprovides="Function Hall",
-        //     state='Karnataka',
-        //     city="Bangalore",
-        //     address1='Lorem Ipsum is simply dummy text of the printing and',
-        //     address2=""
-        //   }
-        // ])
+        const [groomDataList] =useState([
+          {
+            id:0,
+            date:"24/01/2021",           
+            groomname:"Shinde",
+            Age:"28",
+            profession:"UI/UX Designer",
+            fathername:"Sudhakar Verma",
+            status:"Active",
+          },
+          {
+            id:1,
+            date:"24/01/2021",           
+            groomname:"Shinde",
+            Age:"28",
+            profession:"UI/UX Designer",
+            fathername:"Sudhakar Verma",
+            status:"Active",
+          },
+          {
+            id:2,
+            date:"24/01/2021",           
+            groomname:"Shinde",
+            Age:"28",
+            profession:"UI/UX Designer",
+            fathername:"Sudhakar Verma",
+            status:"Active",
+          },
+          {
+            id:3,
+            date:"24/01/2021",           
+            groomname:"Shinde",
+            Age:"28",
+            profession:"UI/UX Designer",
+            fathername:"Sudhakar Verma",
+            status:"Active",
+          },
+          {
+            id:4,
+            date:"24/01/2021",           
+            groomname:"Shinde",
+            Age:"28",
+            profession:"UI/UX Designer",
+            fathername:"Sudhakar Verma",
+            status:"Active",
+          },
+          {
+            id:5,
+            date:"24/01/2021",           
+            groomname:"Shinde",
+            Age:"28",
+            profession:"UI/UX Designer",
+            fathername:"Sudhakar Verma",
+            status:"Active",
+          },
+          {
+            id:6,
+            date:"24/01/2021",           
+            groomname:"Shinde",
+            Age:"28",
+            profession:"UI/UX Designer",
+            fathername:"Sudhakar Verma",
+            status:"Active",
+          },
+          {
+            id:7,
+            date:"24/01/2021",           
+            groomname:"Shinde",
+            Age:"28",
+            profession:"UI/UX Designer",
+            fathername:"Sudhakar Verma",
+            status:"Active",
+          },
+          {
+            id:8,
+            date:"24/01/2021",           
+            groomname:"Shinde",
+            Age:"28",
+            profession:"UI/UX Designer",
+            fathername:"Sudhakar Verma",
+            status:"Active",
+          },
+        ])
+
+       
 
 const[cardlistClose,setCardlistClose]= useState(true);
 const[uploadFile,setUploadFile]= useState(true);
+const[wid, setWid] = useState("0px")
 
 return(
     <Cardlistcontext.Provider value={{cardlistClose, setCardlistClose,OnbordingData,PostData,lastnameData,setlastnameData,
-      uploadFile,setUploadFile, paymentlistData,messagesData
+      uploadFile,setUploadFile, paymentlistData,messagesData,wid,setWid,groomDataList
     }}>
        {props.children}
     </Cardlistcontext.Provider>
