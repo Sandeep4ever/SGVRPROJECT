@@ -267,8 +267,8 @@ const CardlistState =(props)=>{
           {
             id:0,
             date:"24/01/2021",           
-            groomname:"Shinde",
-            Age:"28",
+            groomname:"Mahesh Shinde",
+            age:"28",
             profession:"UI/UX Designer",
             fathername:"Sudhakar Verma",
             status:"Active",
@@ -276,8 +276,8 @@ const CardlistState =(props)=>{
           {
             id:1,
             date:"24/01/2021",           
-            groomname:"Shinde",
-            Age:"28",
+            groomname:" Mahesh Shinde",
+            age:"28",
             profession:"UI/UX Designer",
             fathername:"Sudhakar Verma",
             status:"Active",
@@ -285,8 +285,8 @@ const CardlistState =(props)=>{
           {
             id:2,
             date:"24/01/2021",           
-            groomname:"Shinde",
-            Age:"28",
+            groomname:"Mahesh Shinde",
+            age:"28",
             profession:"UI/UX Designer",
             fathername:"Sudhakar Verma",
             status:"Active",
@@ -294,8 +294,8 @@ const CardlistState =(props)=>{
           {
             id:3,
             date:"24/01/2021",           
-            groomname:"Shinde",
-            Age:"28",
+            groomname:"Mahesh Shinde",
+            age:"28",
             profession:"UI/UX Designer",
             fathername:"Sudhakar Verma",
             status:"Active",
@@ -303,8 +303,8 @@ const CardlistState =(props)=>{
           {
             id:4,
             date:"24/01/2021",           
-            groomname:"Shinde",
-            Age:"28",
+            groomname:"Mahesh Shinde",
+            age:"28",
             profession:"UI/UX Designer",
             fathername:"Sudhakar Verma",
             status:"Active",
@@ -312,8 +312,8 @@ const CardlistState =(props)=>{
           {
             id:5,
             date:"24/01/2021",           
-            groomname:"Shinde",
-            Age:"28",
+            groomname:"Mahesh Shinde",
+            age:"28",
             profession:"UI/UX Designer",
             fathername:"Sudhakar Verma",
             status:"Active",
@@ -321,8 +321,8 @@ const CardlistState =(props)=>{
           {
             id:6,
             date:"24/01/2021",           
-            groomname:"Shinde",
-            Age:"28",
+            groomname:"Mahesh Shinde",
+            age:"28",
             profession:"UI/UX Designer",
             fathername:"Sudhakar Verma",
             status:"Active",
@@ -330,32 +330,86 @@ const CardlistState =(props)=>{
           {
             id:7,
             date:"24/01/2021",           
-            groomname:"Shinde",
-            Age:"28",
+            groomname:"Mahesh Shinde",
+            age:"28",
             profession:"UI/UX Designer",
             fathername:"Sudhakar Verma",
-            status:"Active",
+            status:"Active",   
           },
           {
             id:8,
             date:"24/01/2021",           
-            groomname:"Shinde",
-            Age:"28",
+            groomname:"Mahesh Shinde",
+            age:"28",
             profession:"UI/UX Designer",
             fathername:"Sudhakar Verma",
             status:"Active",
           },
-        ])
+        ]);
 
-       
+const[vendorDataList,setVendorDataList] =useState([
+              {
+                "name":"Sandeep kumar",
+                "city":"Bangalore",
+                "address":"HSR Layout sector 7",
+                "phone":91+ 9847656588,
+                "email":"Sidharthpatel@gmail.com",
+              "Jevellery":"Function Hall",
+              },
+              {
+                "name":"Amogh",
+                "city":"Bangalore",
+                "address":"HSR Layout sector 7",
+                "phone":91+ 9847656588,
+                "email":"Sidharthpatel@gmail.com",
+              "Jevellery":"Function Hall",
+              
+              },
+              {
+                "name":"Deepam",
+                "city":"Bangalore",
+                "address":"HSR Layout sector 7",
+                "phone":91+ 9847656588,
+                "email":"Sidharthpatel@gmail.com",
+              "Jevellery":"Function Hall",
+                
+              },
+              {
+                "name":"Mahesh Shinde",
+                "city":"Bangalore",
+                "address":"HSR Layout sector 7",
+                "phone":91+ 9847656588,
+                "email":"Sidharthpatel@gmail.com",
+              "Jevellery":"Function Hall",
+              
+              },
+              {
+                "name":"Amogh",
+                "city":"Bangalore",
+                "address":"HSR Layout sector 7",
+                "phone":91+ 9847656588,
+                "email":"Sidharthpatel@gmail.com",
+              "Jevellery":"Function Hall",
+              
+              },
+              {
+                "name":"Amogh",
+                "city":"Bangalore",
+                "address":"HSR Layout sector 7",
+                "phone":91+ 9847656588,
+                "email":"Sidharthpatel@gmail.com",
+              "Jevellery":"Function Hall",
+              }
+              ]);
 
 const[cardlistClose,setCardlistClose]= useState(true);
 const[uploadFile,setUploadFile]= useState(true);
-const[wid, setWid] = useState("0px")
+const[vendorDetailshandle, setVendorDetailshandle] = useState(false);
+const[searchInput,setSearchInput]=useState('');
 
 return(
     <Cardlistcontext.Provider value={{cardlistClose, setCardlistClose,OnbordingData,PostData,lastnameData,setlastnameData,
-      uploadFile,setUploadFile, paymentlistData,messagesData,wid,setWid,groomDataList
+      uploadFile,setUploadFile, paymentlistData,messagesData,vendorDetailshandle,setVendorDetailshandle,groomDataList,searchInput,setSearchInput,vendorDataList,setVendorDataList
     }}>
        {props.children}
     </Cardlistcontext.Provider>

@@ -148,19 +148,19 @@ const Form = () => {
              <p>Add Photos</p>
              <Images>
                 <EditSec>
-                 <img src={img.hairpic}/>
+                 <img src={img.hairpic} alt='hairpic'/>
                  <Editadust>
-                 <img src={img.edit}/>
+                 <img src={img.edit} alt='hairpic'/>
                  </Editadust>
                  </EditSec>
                  <CrossSec>
-                 <img src={img.hairpic}/>
+                 <img src={img.hairpic} alt='hairpic'/>
                  <Crossadjust>
-                 <img src={img.cross}/>
+                 <img src={img.cross} alt='hairpic'/>
                  </Crossadjust>
                  </CrossSec>
                 <AddSec>
-                 <img src={img.add}/>
+                 <img src={img.add} alt='hairpic'/>
                  </AddSec>
              </Images>                
          </TextContainer>

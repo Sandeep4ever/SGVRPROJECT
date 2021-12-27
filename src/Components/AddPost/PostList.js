@@ -98,11 +98,10 @@ const PostList = () => {
              {actualData.map((items,index)=>(
                  <PostCard key={index}>
                  <Image>
-                 <img src={items.image}/>
+                 <img src={items.image} alt='image'/>
                <span>
-                   <img src={img.view}/>
+                   <img src={img.view} alt='image'/>
                  </span>
- 
                  </Image>
                  <TextContainer>
                      <Users>

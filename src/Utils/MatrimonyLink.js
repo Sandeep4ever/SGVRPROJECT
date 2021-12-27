@@ -4,9 +4,7 @@ import OnlySearchbar from './OnlySearchbar';
 import {NavLink} from 'react-router-dom';
 
 const MainListContainer=styled.div`
-
 `
-
 const Header=styled.header`;
 font: normal normal 500 16px/25px Poppins;
 color: #000000;

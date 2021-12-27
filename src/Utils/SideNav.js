@@ -24,7 +24,8 @@ span{
   color: #ffffff;
   padding-left: 9px;
 }
-`;
+`
+
 const Contant = styled.section`
   margin-top: 55px;
   display: flex;
@@ -34,7 +35,6 @@ const Contant = styled.section`
     height: 46px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
    border-radius: 8px;
    &:hover {
@@ -43,14 +43,14 @@ const Contant = styled.section`
   }
   a{
     text-decoration:none;
+    width:100%;
+    height:100%;
     color: #ffffff;
-    margin-left: 30px;
+    padding-left: 30px;
+    border-radius: 8px;
     font: normal normal normal 16px/19px Rubik;
-  &:active {
-    color: red;
   }
-  }
-`;
+`
 
 const SideNav = () => {
     return (
@@ -61,38 +61,74 @@ const SideNav = () => {
             </Logo>
             <Contant>
                   <div >
-                  <NavLink  className='navlink' to="/about" >Dashboard</NavLink>
+                  <NavLink  className='navlink' to="/about" 
+                   style={({ isActive }) => ({
+                    color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
+                  })}
+                  >Dashboard</NavLink>
                   </div>
                  <div>
                   <NavLink to="/matrimonylist" 
                     style={({ isActive }) => ({
                     color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
                   })}
                   >Matrimony</NavLink>
                   </div>
                   <div >
-                  <NavLink to="/about">B2B</NavLink>
+                  <NavLink to="/about"
+                  style={({ isActive }) => ({
+                    color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
+                  })}
+                  >B2B</NavLink>
                   </div>
                   <div>
                   <NavLink to="/onbordinglist" 
                    style={({ isActive }) => ({
                     color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
                   })}
                   >Jewellery</NavLink>
                   </div>
                   <div>
-                  <NavLink to="/about">Social Media</NavLink>
+                  <NavLink to="/about"
+                  style={({ isActive }) => ({
+                    color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
+                  })}
+                  >Social Media</NavLink>
                   </div>
                   <div>
-                  <NavLink to="/about">Career and talent</NavLink>
+                  <NavLink to="/about"
+                  style={({ isActive }) => ({
+                    color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
+                  })}
+                  >Career and talent</NavLink>
                   </div>
                   <div>
-                  <NavLink to="/about">Community</NavLink>
+                  <NavLink to="/about"
+                  style={({ isActive }) => ({
+                    color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
+                  })}
+                  >Community</NavLink>
                   </div>
                   <div>
                   <NavLink to="/lastnamelist"
                    style={({ isActive }) => ({
                     color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
                   })}
                   >Last Name List</NavLink>
                   </div>
@@ -100,6 +136,8 @@ const SideNav = () => {
                   <NavLink to="/postlist"
                    style={({ isActive }) => ({
                     color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
                   })}
                   >Add Post</NavLink>
                   </div>
@@ -107,11 +145,19 @@ const SideNav = () => {
                   <NavLink to="/paymentstatus"
                    style={({ isActive }) => ({
                     color: isActive ? 'red' : '#fff',
+                     background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
                   })}
                   >Payment</NavLink>
                   </div>
                   <div>
-                  <NavLink to="/postlist">Subscription Plan</NavLink>
+                  <NavLink to="/postlist"
+                  style={({ isActive }) => ({
+                    color: isActive ? 'red' : '#fff',
+                    background: isActive && '#BF9D2C',
+                    lineHeight:'46px',
+                  })}
+                  >Subscription Plan</NavLink>
                   </div>
             </Contant>        
       </MainNavContainer>

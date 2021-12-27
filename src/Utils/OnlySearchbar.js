@@ -1,6 +1,7 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import styled from 'styled-components';
 import img from '../Assets/Images/Images';
+import Cardlistcontext from '../ContextApi/Cardlistcontext';
 
 const MainContainer=styled.div`
 display: flex;
@@ -18,7 +19,6 @@ input{
     &:focus-visible{
         outline:none;
     }
-
 }
 `
 const Imgdiv=styled.div`
@@ -31,10 +31,17 @@ background: #D8AE25 0% 0% no-repeat padding-box;
 border-radius: 0px 8px 8px 0px;
 `
 const OnlySearchbar = () => {
+    const state =useContext(Cardlistcontext);
+
     return (
         <MainContainer>
             <Inputdiv>
-            <input type='text' placeholder='Search'/>
+            <input
+             type='text' 
+             placeholder='Search'
+             value={state.searchInput}
+             onChange={e=>state.setSearchInput(e.target.value)}
+             />
             </Inputdiv>
         <Imgdiv>
         <img src={img.search} alt='search'/>

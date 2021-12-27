@@ -2,27 +2,17 @@ import React from 'react';
 import './App.css'
 import Navbar from './Utils/Navbar';
 import SideNav from './Utils/SideNav';
-import CardList from './Components/Jewellery/CardList';
-import styled from 'styled-components';
 import GlobalStyle from './Utils/GlobalStyle';
 import CardlistState from './ContextApi/CardlistState';
-import Searchbar from './Utils/Searchbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Onbordinglist from './Components/Jewellery/Onbordinglist/Onbordinglist';
-import Form from './Components/Jewellery/Onbordinglist/Form';
 import PostList from './Components/AddPost/PostList';
-import PostForm from './Components/AddPost/PostForm';
-import Login from './Pages/LoginPage/Login';
 import LastNameList from './Components/LastNameList/LastNameList';
-import AddLastNamepopup from './Components/LastNameList/AddLastNamepopup';
-import Upload from './Components/LastNameList/upload';
-import OnlySearchbar from './Utils/OnlySearchbar';
 import PaymentStatus from './Components/Payment/PaymentStatus';
 import Messages from './Pages/Messages/Messages';
 import ForgetPassword from './Pages/LoginPage/ForgetPassword';
 import Matrimony from './Components/Matrimony/Matrimony';
-import VendorDetails from './Components/Matrimony/VendorDetails';
-import MatrimonyLink from './Utils/MatrimonyLink';
+import Groom from './Components/Matrimony/Groom/Groom';
 
 const App = () => {
  
@@ -41,9 +31,12 @@ const App = () => {
      {/* <OnlySearchbar/> */}
      {/* <PaymentStatus/> */}
       {/* <VendorDetails/> */}
-      <MatrimonyLink/>
-        <Routes>
- <Route path='/matrimonylist' element={ <Matrimony/>}/>
+      {/* <MatrimonyLink/> */}
+ <Routes>
+      <Route path='/matrimonylist' element={ <Matrimony/>}/>
+ </Routes>
+ <Routes>
+      {/* <Route path='/groom' element={ <Groom/>}/> */}
  </Routes>
    <Routes>
  <Route path='/onbordinglist' element={ <Onbordinglist/>}/>

@@ -56,7 +56,7 @@ export default function MultipleSelectCheckmarks() {
            borderStyle:"none",
           //  boxShadow:"none,"
         }}
-        disableUnderline
+        
           labelId="demo-multiple-checkbox-label"
           id="demo-multiple-checkbox"
           multiple

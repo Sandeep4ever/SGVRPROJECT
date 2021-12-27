@@ -4,9 +4,10 @@ import SvgIcon from "@material-ui/core/SvgIcon";
 import Cardlistcontext from '../../ContextApi/Cardlistcontext';      
 
 const Maincontainer=styled.div`
-transition : .2s ease-in-out;
-scroll-behavior : smooth;
-overflow-x : hidden;
+width:349px;
+// transition : .2s ease-in-out;
+// scroll-behavior : smooth;
+// overflow-x : hidden;
 height: 770px;
 background: #FFFFFF 0% 0% no-repeat padding-box;
 box-shadow: 0px 1px 8px #00000029;
@@ -76,10 +77,12 @@ const VendorDetails = () => {
     const state= useContext(Cardlistcontext);
 
     const closeVendorDetails=()=>{
-        state.setWid("0px")
+        // state.setWid("0px")
+        state.setVendorDetailshandle(!state.vendorDetailshandle)
+
     }
     return (
-        <Maincontainer style={{width : state.wid}} >
+        <Maincontainer  >
             <CloseImageDiv onClick={closeVendorDetails}>
                 <SvgIcon>
                     <path id="_7787567_wrong_delete_remove_trash_minus_icon" data-name="7787567_wrong_delete_remove_trash_minus_icon" 
