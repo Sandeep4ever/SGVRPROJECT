@@ -10,6 +10,7 @@ import Dropdown from "./Dropdown";
 import VendorDetails from "./VendorDetails";
 import { NavLink } from "react-router-dom";
 import Groom from "./Groom/Groom";
+import GroomonboardingData from "./Groom/GroomonboardingData";
 
 const WrapVendorDetails = styled.div`
   position: absolute;
@@ -17,24 +18,20 @@ const WrapVendorDetails = styled.div`
   right: 0;
 `;
 const WrapGroomComponents = styled.div`
-//   width: 100%;
+
 `;
 const Matrimony = () => {
     const state = useContext(Cardlistcontext);
+
 let [show,setoutputShow]=useState(state.vendorDataList);
   
-
-  const [renderComponents, setRenderComponents] = useState(false);
   const viewVendorDetails = () => {
-    // state.setWid("349px");
-   
+   state.setVendorDetailshandle(!state.vendorDetailshandle)
   };
-  const GroomComponents = () => {
   
-  };
 
 let newValue =state.searchInput;
-// console.log(newValue);
+console.log(newValue);
 let t=[];
 const searchFun=value=>{
 let filterArr =[];
@@ -53,27 +50,26 @@ setoutputShow(t);
 show =t.length > 0 ? t : show; 
 console.log(show)
 
-
+console.log("sandeep")
 
   return (
     <>
 {state.vendorDetailshandle &&  <WrapVendorDetails><VendorDetails /> </WrapVendorDetails>}
-
       <WrapContainer>
         <SideNav />
         <WrapPaginationandMainList>
           <MainListContainer>
             <Header>Onboarding list</Header>
             <Section>
-              <VendorsDiv>
+              <VendorsDiv onClick={()=>state.setChangeScreeing("firstScreen")}>
                 {/* <NavLink to="/matrimony"> Vendors</NavLink> */}
                 Vendors
               </VendorsDiv>
-              <GroomDiv onClick={GroomComponents}>
+              <GroomDiv onClick={()=>state.setChangeScreeing("secondScreen")}>
                 {/* <NavLink to="/groom">Groom</NavLink> */}
                 Groom
               </GroomDiv>
-              <BrideDiv>
+              <BrideDiv onClick={()=>state.setChangeScreeing("thirdScreen")}>
                 {/* <NavLink to="/about"> Bride</NavLink> */}
                 Bride
               </BrideDiv>
@@ -83,13 +79,9 @@ console.log(show)
               <Dropdown />
             </SearchContainer>
 
-            {renderComponents && (
+           
               <WrapGroomComponents>
-                <Groom />
-              </WrapGroomComponents>
-            )}
-    {!renderComponents && 
-            <WrapCardConta>
+                  { (state.changeScreeing === "firstScreen") ?   <WrapCardConta>
               {show.map((items, index) =><CardContainer key={index}>
                     <ViewIconDiv onClick={viewVendorDetails}>
                       {/* <img src={viewpic} alt='delete'/> */}
@@ -132,14 +124,23 @@ console.log(show)
                     </ButtonDiv>
                   </CardContainer>
               )}
-            </WrapCardConta>
-}
+            </WrapCardConta>               
+                  
+                  
+                  : (state.changeScreeing ==="secondScreen") ? <Groom/> : <Groom/>} 
+              </WrapGroomComponents>
+           
+   
+          
+
           </MainListContainer>
           <PaginationDiv>
             <Pagination styled={{ paddingRight: "42px" }} />
           </PaginationDiv>
         </WrapPaginationandMainList>
       </WrapContainer>
+
+
     </>
   );
 };

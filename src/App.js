@@ -13,6 +13,7 @@ import Messages from './Pages/Messages/Messages';
 import ForgetPassword from './Pages/LoginPage/ForgetPassword';
 import Matrimony from './Components/Matrimony/Matrimony';
 import Groom from './Components/Matrimony/Groom/Groom';
+import GroomonboardingData from './Components/Matrimony/Groom/GroomonboardingData';
 
 const App = () => {
  
@@ -32,6 +33,7 @@ const App = () => {
      {/* <PaymentStatus/> */}
       {/* <VendorDetails/> */}
       {/* <MatrimonyLink/> */}
+      <GroomonboardingData/>
  <Routes>
       <Route path='/matrimonylist' element={ <Matrimony/>}/>
  </Routes>

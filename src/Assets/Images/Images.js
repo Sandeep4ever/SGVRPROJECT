@@ -29,7 +29,21 @@ import view2 from '../Images/view.svg';
 import backicon from '../Images/backicon.svg';
 import people from '../Images/people.png';
 import sendmessage from '../Images/sendmessage.png';
+import Groomimg from '../Images/Groomimg.png';
 
+import groom1 from '../Images/groom1.png';
+import groom2 from '../Images/groom2.png';
+import groom3 from '../Images/groom3.png';
+
+import groom4 from '../Images/groom4.png';
+import calendar from '../Images/calendar.svg';
+import degree from '../Images/degree.svg';
+
+import city from '../Images/city.svg';
+
+import location2 from '../Images/location2.svg';
+import emailimg from '../Images/emailimg.svg';
+import phoneno from '../Images/phoneno.svg';
 
 
 
@@ -66,5 +80,17 @@ const images ={
     backicon,
     people,
     sendmessage,
+    Groomimg,
+    groom1,
+    groom2,
+    groom3,
+    groom4 ,
+    calendar,
+    degree,
+    city,
+    location2,
+    emailimg,
+    phoneno,
+
 }
 export default images;

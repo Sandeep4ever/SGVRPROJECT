@@ -406,10 +406,13 @@ const[cardlistClose,setCardlistClose]= useState(true);
 const[uploadFile,setUploadFile]= useState(true);
 const[vendorDetailshandle, setVendorDetailshandle] = useState(false);
 const[searchInput,setSearchInput]=useState('');
+const [changeScreeing, setChangeScreeing] = useState("firstScreen");
+
 
 return(
     <Cardlistcontext.Provider value={{cardlistClose, setCardlistClose,OnbordingData,PostData,lastnameData,setlastnameData,
-      uploadFile,setUploadFile, paymentlistData,messagesData,vendorDetailshandle,setVendorDetailshandle,groomDataList,searchInput,setSearchInput,vendorDataList,setVendorDataList
+      uploadFile,setUploadFile, paymentlistData,messagesData,vendorDetailshandle,setVendorDetailshandle,groomDataList,searchInput,
+      setSearchInput,vendorDataList,setVendorDataList,changeScreeing,setChangeScreeing
     }}>
        {props.children}
     </Cardlistcontext.Provider>

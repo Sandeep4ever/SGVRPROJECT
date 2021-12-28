@@ -7,7 +7,6 @@ import img from '../../../Assets/Images/Images';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Pagination from '../../../Utils/Pagination';
 
-
 const MainContainer =styled.div`
 `
 const TableContainer=styled.div`
