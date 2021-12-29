@@ -1,10 +1,11 @@
-import React,{useContext} from 'react';
+import React,{useState,useContext, useEffect} from 'react';
 import styled from 'styled-components';
 import SideNav from '../../Utils/SideNav';
 import img from '../../Assets/Images/Images';
 import Cardlistcontext from '../../ContextApi/Cardlistcontext';
 import AddLastNamepopup from './AddLastNamepopup';
 import Upload from './upload';
+import axios from 'axios';
 
 const MainContainer=styled.div`
  display: flex;
@@ -104,42 +105,40 @@ background: rgb(0,0,0,0.2);
 const LastNameList = () => {
   const state= useContext(Cardlistcontext);
   const uploadfile= useContext(Cardlistcontext);
-  //  let allData=state.lastnameData;
-  //  let renderData =[];
-  //  renderData =renderData.length > 0 ? renderData :state.lastnameData;
-
-//  let actualData =lastData.lastnameData;
-// console.log(renderData)
-
+  const[getApiData,setGetApiData]=useState([]);
+  
  const showLastName=()=>{
   state.setCardlistClose(!state.cardlistClose)
  }
-
  const showUploadFile=()=>{
   uploadfile.setUploadFile(!uploadfile.uploadFile)
  }
-//  console.log(state.lastnameData)
-
- const deleteData =(id)=>{
-  //  console.log("index kiska", id);
-
-   state.setlastnameData(state.lastnameData.filter((items) => items.id !== id))
-  
-  // console.log(state.lastnameData)
-  //  if(renderData.id !== index){
-      
+ const deleteData =(_id)=>{
+   state.setlastnameData(state.lastnameData.filter((items) => items._id !== _id)) 
    }
+
+  
+
+   useEffect(()=>{
+
+   
+     axios.get("https://sgvr-server.herokuapp.com/api/admin/lastname").then((response)=>{
+      setGetApiData(response.data);
+       console.log(response.data);
+     })
+
+    
+  
+   },[])
   
   
 
  
     return (
-  
-
         <MainContainer>
             <SideNav/>
 
-            {!state.cardlistClose &&   <PopupCenter> <AddLastNamepopup/>  </PopupCenter>  }
+            {!state.cardlistClose &&   <PopupCenter> <AddLastNamepopup />  </PopupCenter>  }
             {!uploadfile.uploadFile &&   <PopupCenter> <Upload/>  </PopupCenter>  }
 
             <NameListContainer>
@@ -161,11 +160,11 @@ const LastNameList = () => {
                   <th>Created Date</th>
                   <th>Action</th>
                 </tr>
-          {state.lastnameData.map((items)=>(
-                <tr key={items.id}>
+          {getApiData.map((items)=>(
+                <tr key={items._id}>
                 <td>{items.lastname}</td>
-                <td>{items.date}</td>
-                <td> <img src={img.delete2} onClick={()=>deleteData(items.id)} alt='delete'/></td>
+                <td>{items.createdAt.split('T')[0]}</td>
+                <td> <img src={img.delete2} onClick={()=>deleteData(items._id)} alt='delete'/></td>
                 </tr>
           ))}
               </table>

@@ -25,7 +25,7 @@ const App = () => {
 <Routes>
      <Route path='/' element={<SideNav/>}/>
 </Routes>
-            {/* <CardList/> */}
+     {/* <CardList/> */}
     {/* <Login/> */}
      {/* <AddLastNamepopup/> */}
    {/* <Upload/> */}

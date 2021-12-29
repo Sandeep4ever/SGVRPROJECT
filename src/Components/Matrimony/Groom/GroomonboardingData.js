@@ -84,26 +84,50 @@ const GroomPersonalDetailsDiv=styled.div`
 margin-top:49px;
 div{
 display:flex;
-align-items:center;
+margin-top:10px;
 border:1px solid red;
 img{
-  
+    width: 32px;
+    height: 32px;
 }
 p{
-margin-left:18px;
+   font: normal normal normal 13px/20px Poppins;
+   color: #4D4D4D;
+   margin-left:18px;
+   margin-top:7px;
+
 }
 }
-
-
 `
 const SiblingDetails =styled.div`
-
-`
-const SiblingHeader =styled.div`
-
+border:1px solid red;
+margin-top:52px;
+h3{
+    font: normal normal 500 18px/27px Poppins;
+    color: #D8AE25;
+}
 `
 const SiblingPersonalDetails =styled.div`
+border:1px solid red;
+div{
+display:flex;
+border:1px solid red;
 
+margin-top:22px;
+
+}
+p{
+    width: 95px;
+    font: normal normal 500 13px/20px Poppins;
+    color: #232323;
+border:1px solid red;
+
+}
+span{
+    font: normal normal normal 13px/20px Poppins;
+    color: #4D4D4D;
+    margin-left:49px;
+}
 `
 const FatherAndMotherDetailsDiv=styled.div`
 
@@ -153,7 +177,7 @@ const GroomonboardingData = () => {
                   </GroomName>
                 <GroomPersonalDetailsDiv>
                     <div>
-                       <img src={img.calendar} alt='calendar'/>
+                          <img src={img.calendar} alt='calendar'/>
                         <p>24 November1994</p>
                     </div>
                     <div>
@@ -173,7 +197,7 @@ const GroomonboardingData = () => {
                         <p>Bangalore, Karnataka</p>
                     </div>
                     <div>
-                       <img src={img.location2} alt='image'/>
+                         <img src={img.location2} alt='image'/>                  
                         <p>Birth place : Bangalore,
                              Karnataka HSR layout sector 7,
                               manganamapalya road.</p>
@@ -181,9 +205,7 @@ const GroomonboardingData = () => {
                 </GroomPersonalDetailsDiv>
               </GroomDetailsDiv>
               <SiblingDetails>
-                 <SiblingHeader>
-                     Sibling Details
-                 </SiblingHeader>
+                  <h3>Sibling Details</h3>              
                  <SiblingPersonalDetails>
                   <div>
                       <p>Name</p>

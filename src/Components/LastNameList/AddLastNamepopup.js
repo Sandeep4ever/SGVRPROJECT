@@ -1,7 +1,8 @@
-import React,{useContext} from 'react';
+import React,{useContext, useState} from 'react';
 import styled from 'styled-components';
 import img from '../../Assets/Images/Images';
 import Cardlistcontext from '../../ContextApi/Cardlistcontext';
+import axios from 'axios';
 
 const PopupContainer=styled.div`
 width: 274px;
@@ -46,22 +47,38 @@ border:none;
 `
 const AddLastNamepopup = () => {
     const state =useContext(Cardlistcontext);
-      let data=[{...state.lastnameData},]
+    const[storeData,setstoreData] =useState({
+        name:"",
+    });
+    //   let data=[{...state.lastnameData},]
 
     const closePopup=()=>{
      state.setCardlistClose(!state.cardlistClose)
     }
 
     const handleData=(e)=>{
-        data={[e.target.name]:e.target.value,id:state.lastnameData.at(-1).id+1}
+        setstoreData({
+            ...storeData,
+            [e.target.name]: e.target.value,
+        })
+        // data={[e.target.name]:e.target.value,id:state.lastnameData.at(-1).id+1}
     }
 
 
-    const AddData=()=>{
-        state.lastnameData.push(data)
-        state.setCardlistClose(!state.cardlistClose)
+    const AddData= async ()=>{
+        // setstoreData.push(data);
+        console.log(storeData);
+        state.setCardlistClose(!state.cardlistClose);
+        console.log(storeData)
+ 
+       axios.post("https://sgvr-server.herokuapp.com/api/admin/lastname",{"lname":storeData.lastname})
+        .then(response => {console.log(response)})
+ 
+     
+     
+       
     }
-
+// console.log(state.lastnameData.lastname);
     return (
         <PopupContainer>
             <ContextContainer>
@@ -69,12 +86,12 @@ const AddLastNamepopup = () => {
                 <Header> Add Last Name </Header>             
                 <input 
                 type='text'  
-                placeholder='Add last Name'
+                // placeholder='Add last Name'
                 name='lastname'
-                value={ state.lastnameData.lastname}
+                // value={storeData.name}
                 onChange={handleData}
                 />    
-                <Button onClick={AddData} >Add </Button>
+                <Button onClick={AddData} >Add</Button>
             </ContextContainer>
         </PopupContainer>
     )
